@@ -1,7 +1,6 @@
 .navbar {
   /* Display */
   display: flex;
-  justify-content: space-between;
   align-items: center;
 
   /* Background */
@@ -10,7 +9,7 @@
 
 .navbar-top {
   /* Size */
-  min-height: 9%;
+  min-height: 10%;
 
   /* Margin and padding */
   padding: 0 2vw;
@@ -19,10 +18,23 @@
 .navbar-left {
   /* Size */
   width: 8%;
-  min-height: 91%;
 
   /* Display */
+  flex: 1;
   flex-direction: column-reverse;
+
+  /* Margin and padding */
+  padding: 4vw 0;
+}
+
+.navbar__copyright {
+  /* Font */
+  font-size: 0.85vw;
+  font-weight: 500;
+  writing-mode: vertical-rl;
+
+  /* Transform */
+  transform: rotate(180deg);
 }
 
 p {
