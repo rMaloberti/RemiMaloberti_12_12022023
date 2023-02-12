@@ -1,0 +1,45 @@
+.navbar {
+  /* Display */
+  display: flex;
+  align-items: center;
+
+  /* Background */
+  background-color: #020203;
+}
+
+.navbar-top {
+  /* Size */
+  min-height: 10%;
+
+  /* Display */
+  gap: 10vw;
+
+  /* Margin and padding */
+  padding: 0 2vw;
+}
+
+.navbar-left {
+  /* Size */
+  width: 8%;
+
+  /* Display */
+  flex: 1;
+  flex-direction: column-reverse;
+
+  /* Margin and padding */
+  padding: 4vw 0;
+}
+
+.navbar__copyright {
+  /* Font */
+  font-size: 0.85vw;
+  font-weight: 500;
+  writing-mode: vertical-rl;
+
+  /* Transform */
+  transform: rotate(180deg);
+}
+
+p {
+  color: white;
+}
