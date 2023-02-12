@@ -1,0 +1,14 @@
+.logo {
+  /* Size */
+  width: 12.5vw;
+
+  /* Display */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo__img {
+  /* Size */
+  width: 100%;
+}

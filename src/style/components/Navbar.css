@@ -1,0 +1,30 @@
+.navbar {
+  /* Display */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* Background */
+  background-color: #020203;
+}
+
+.navbar-top {
+  /* Size */
+  min-height: 9%;
+
+  /* Margin and padding */
+  padding: 0 2vw;
+}
+
+.navbar-left {
+  /* Size */
+  width: 8%;
+  min-height: 91%;
+
+  /* Display */
+  flex-direction: column-reverse;
+}
+
+p {
+  color: white;
+}

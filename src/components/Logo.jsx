@@ -1,15 +1,12 @@
-import sportsee from '../icons/sportsee_logo.svg';
-import '../style/components/Logo.css'
+import sportseeLogo from '../icons/sportsee_logo.svg';
+import '../style/components/Logo.css';
 
 const Logo = () => {
   return (
     <div className="logo">
-      <div className="icon logo__icon">
-        <img className="icon__img" alt="Sportsee icon" src={sportsee} />
-      </div>
-      <p className="logo__text">SportSee</p>
+      <img className="logo__img" alt="Sportsee logo" src={sportseeLogo} />
     </div>
   );
-}
+};
 
 export default Logo;

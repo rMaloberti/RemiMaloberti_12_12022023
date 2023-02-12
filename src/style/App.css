@@ -1,0 +1,21 @@
+.app, .nav {
+  /* Size */
+  width: 100%;
+  height: 100%;
+
+  /* Display */
+  display: flex;
+}
+
+.app {
+  /* Position */
+  position: relative;
+}
+
+.nav {
+  /* Display */
+  flex-direction: column;
+
+  /* Position */
+  position: absolute;
+}
