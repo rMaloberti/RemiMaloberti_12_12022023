@@ -1,5 +1,7 @@
 import './style/App.css';
 
-export const App = () => {
+const App = () => {
   return;
 };
+
+export default App;
