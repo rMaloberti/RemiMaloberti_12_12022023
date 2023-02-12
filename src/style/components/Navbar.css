@@ -11,6 +11,9 @@
   /* Size */
   min-height: 10%;
 
+  /* Display */
+  gap: 10vw;
+
   /* Margin and padding */
   padding: 0 2vw;
 }
