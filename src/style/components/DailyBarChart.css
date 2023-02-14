@@ -1,0 +1,58 @@
+.daily-bar-chart {
+  /* Size */
+  width: 100%;
+
+  /* Display */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Position */
+  position: relative;
+
+  /* Background */
+  background-color: #fbfbfb;
+
+  /* Border */
+  border-radius: 0.5vw;
+
+  /* Margin and padding */
+  padding: 2vh 2vw 4vh 2vw;
+}
+
+.daily-bar-chart__title {
+  /* Position */
+  position: absolute;
+  top: 3.3vh;
+  left: 3vw;
+
+  /* Font */
+  font-size: 1vw;
+  font-weight: 500;
+}
+
+.legend-item-0 {
+  /* Margin and padding */
+  margin-right: 2vw !important;
+}
+
+.legend-item-1 {
+  /* Margin and padding */
+  margin: 0 !important;
+}
+
+.recharts-legend-item-text {
+  /* Font */
+  color: #74798c !important;
+  font-size: 1vw;
+  font-weight: 500;
+
+  /* Margin and padding */
+  margin-left: 0.4vw;
+}
+
+.recharts-text {
+  /* Font */
+  color: #9B9EAC;
+  font-size: 1vw;
+}
