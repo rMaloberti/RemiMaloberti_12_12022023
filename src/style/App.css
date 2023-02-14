@@ -22,6 +22,7 @@
 
 .main {
   /* Display */
+  display: flex;
   flex: 1;
 
   /* Margin and padding */
