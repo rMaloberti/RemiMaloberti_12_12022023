@@ -17,7 +17,7 @@
   /* Display */
   display: flex;
   flex-direction: column;
-  gap: 5.5vh;
+  gap: 3vh;
 }
 
 .dashboard__header__greetings {
