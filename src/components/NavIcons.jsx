@@ -1,7 +1,9 @@
 import '../style/components/NavIcons.css';
 
 const NavIcons = () => {
-  return;
+  return (
+    <div className="nav-icons"></div>
+  );
 };
 
 export default NavIcons;
