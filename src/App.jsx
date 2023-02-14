@@ -1,3 +1,4 @@
+import Dashboard from './components/Dashboard';
 import Navbar from './components/Navbar';
 import './style/App.css';
 
@@ -8,7 +9,9 @@ const App = () => {
         <Navbar location="top" />
         <Navbar location="left" />
       </div>
-      <div className="main app__main"></div>
+      <div className="main">
+        <Dashboard />
+      </div>
     </div>
   );
 };
