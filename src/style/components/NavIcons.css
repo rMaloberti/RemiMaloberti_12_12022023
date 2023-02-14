@@ -2,7 +2,7 @@
   /* Display */
   display: flex;
   flex-direction: column;
-  gap: 1vw;
+  gap: .5vw;
 }
 
 .nav-icons__button {  
@@ -19,11 +19,14 @@
 
   /* Margin and padding */
   padding: .9vw;
+
+  /* Interactivity */
+  cursor: pointer;
 }
 
 .nav-icons__button__icon {
   /* Size */
-  width: 2.5vw;
+  width: 2vw;
 
   /* Display */
   display: flex;

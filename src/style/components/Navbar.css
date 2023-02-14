@@ -12,7 +12,7 @@
   min-height: 10%;
 
   /* Display */
-  gap: 10vw;
+  gap: 12.5vw;
 
   /* Margin and padding */
   padding: 0 2vw;
@@ -25,10 +25,10 @@
   /* Display */
   flex: 1;
   flex-direction: column-reverse;
-  gap: 15vh;
+  gap: 12.5vh;
 
   /* Margin and padding */
-  padding: 4vw 0;
+  padding: 2.5vw 0;
 }
 
 .navbar__copyright {

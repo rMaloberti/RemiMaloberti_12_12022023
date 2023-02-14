@@ -5,10 +5,7 @@
   /* Display */
   display: flex;
   flex-direction: column;
-  gap: 7.5vh;
-
-  /* Margin and padding */
-  margin: 5vh 6.25vw 7vh 7.5vw;
+  gap: 5vh;
 }
 
 .dashboard__header {
