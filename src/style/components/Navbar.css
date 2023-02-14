@@ -32,14 +32,11 @@
 
 .navbar__copyright {
   /* Font */
+  color: #ffffff;
   font-size: 0.85vw;
   font-weight: 500;
   writing-mode: vertical-rl;
 
   /* Transform */
   transform: rotate(180deg);
-}
-
-p {
-  color: white;
 }
