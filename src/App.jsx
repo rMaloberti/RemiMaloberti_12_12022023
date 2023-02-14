@@ -8,7 +8,7 @@ const App = () => {
         <Navbar location="top" />
         <Navbar location="left" />
       </div>
-      <div className="main app__main"></div>
+      <div className="main"></div>
     </div>
   );
 };

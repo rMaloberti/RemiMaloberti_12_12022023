@@ -19,3 +19,12 @@
   /* Position */
   position: absolute;
 }
+
+.main {
+  /* Display */
+  flex: 1;
+
+  /* Margin and padding */
+  padding-top: 7%;
+  padding-left: 8%;
+}
