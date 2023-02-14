@@ -53,6 +53,33 @@
 
 .recharts-text {
   /* Font */
-  color: #9B9EAC;
+  color: #9b9eac;
   font-size: 1vw;
+}
+
+.custom-tooltip {
+  /* Display */
+  display: flex;
+  flex-direction: column;
+
+  /* Background */
+  background: red;
+}
+
+.custom-tooltip__data {
+  /* Display */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Margin and padding */
+  padding: 0.9vw 0.45vw;
+}
+
+.custom-tooltip__data__text {
+  /* Font */
+  color: white;
+  font-size: .75vw;
+  font-weight: 500;
+  text-align: center;
 }

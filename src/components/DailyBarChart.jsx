@@ -10,6 +10,25 @@ import {
 } from 'recharts';
 import '../style/components/DailyBarChart.css';
 
+const CustomTooltip = ({ active, payload, label }) => {
+  if (active && payload && payload.length) {
+    return (
+      <div className="custom-tooltip">
+        {payload.map((pld, index) => (
+          <div key={index} className="custom-tooltip__data">
+            <p className="custom-tooltip__data__text">
+              {pld.value}
+              {pld.unit}
+            </p>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  return null;
+};
+
 const DailyBarChart = () => {
   const DATA = [
     {
@@ -72,7 +91,12 @@ const DailyBarChart = () => {
             domain={['dataMin - 50', 'dataMax + 50']}
           />
           <CartesianGrid vertical={false} stroke="#DEDEDE" strokeDasharray="2" />
-          <Tooltip />
+          <Tooltip
+            offset={50}
+            wrapperStyle={{ outline: 'none' }}
+            content={<CustomTooltip />}
+            cursor={{ fill: 'rgba(196, 196, 196, 0.5)' }}
+          />
           <Legend align="right" verticalAlign="top" iconSize={8} iconType="cricle" height={100} />
           <Bar
             name="Poids (kg)"
