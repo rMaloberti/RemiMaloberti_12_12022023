@@ -5,7 +5,7 @@
   gap: 1vw;
 }
 
-.nav-icons__button {
+.nav-icons__button {  
   /* Display */
   display: flex;
   justify-content: center;
@@ -18,10 +18,13 @@
   border-radius: 0.4vw;
 
   /* Margin and padding */
-  padding: 0.9vw;
+  padding: .9vw;
 }
 
 .nav-icons__button__icon {
+  /* Size */
+  width: 2.5vw;
+
   /* Display */
   display: flex;
   justify-content: center;
