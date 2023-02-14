@@ -25,6 +25,7 @@
   /* Display */
   flex: 1;
   flex-direction: column-reverse;
+  gap: 12.5vw;
 
   /* Margin and padding */
   padding: 4vw 0;

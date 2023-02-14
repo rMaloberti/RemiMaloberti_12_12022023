@@ -1,5 +1,6 @@
 import '../style/components/Navbar.css';
 import Logo from './Logo';
+import NavIcons from './NavIcons';
 import NavLinks from './NavLinks';
 
 const Navbar = ({ location }) => {
@@ -10,7 +11,7 @@ const Navbar = ({ location }) => {
       ) : (
         <p className="navbar__copyright">Copiryght, SportSee 2020</p>
       )}
-      {location === 'top' ? <NavLinks /> : <p>icon-list</p>}
+      {location === 'top' ? <NavLinks /> : <NavIcons />}
     </div>
   );
 };

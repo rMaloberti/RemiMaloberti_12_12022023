@@ -1,0 +1,34 @@
+.nav-icons {
+  /* Display */
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+.nav-icons__button {
+  /* Display */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Background */
+  background-color: #ffffff;
+
+  /* Border */
+  border-radius: 0.4vw;
+
+  /* Margin and padding */
+  padding: 0.9vw;
+}
+
+.nav-icons__button__icon {
+  /* Display */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-icons__button__icon__img {
+  /* Size */
+  width: 100%;
+}
