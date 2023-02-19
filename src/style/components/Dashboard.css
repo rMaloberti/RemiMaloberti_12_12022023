@@ -26,7 +26,7 @@
 
 .dashboard__header__greetings__name {
   /* Font */
-  color: #FF0101;
+  color: #ff0101;
 }
 
 .dashboard__header__feedback {
@@ -51,16 +51,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2.5vw;
 }
 
-.charts-top {
+.charts-top,
+.charts-bottom {
   /* Size */
   width: 100%;
 
   /* Display */
   display: flex;
-  justify-content: center;
   align-items: center;
+}
+
+.charts-top {
+  /* Display */
+  justify-content: center;
+}
+
+.charts-bottom {
+  /* Display */
+  justify-content: space-between;
 }
 
 .nutritionals {

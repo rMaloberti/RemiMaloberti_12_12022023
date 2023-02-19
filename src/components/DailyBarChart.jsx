@@ -13,10 +13,10 @@ import '../style/components/DailyBarChart.css';
 const CustomTooltip = ({ active, payload, label }) => {
   if (active && payload && payload.length) {
     return (
-      <div className="custom-tooltip">
+      <div className="daily-custom-tooltip">
         {payload.map((pld, index) => (
-          <div key={index} className="custom-tooltip__data">
-            <p className="custom-tooltip__data__text">
+          <div key={index} className="daily-custom-tooltip__data">
+            <p className="daily-custom-tooltip__data__text">
               {pld.value}
               {pld.unit}
             </p>
@@ -67,14 +67,14 @@ const DailyBarChart = () => {
       calories: 390,
     },
   ];
+
   return (
     <div className="daily-bar-chart">
       <p className="daily-bar-chart__title">Activité quotidienne</p>
       <ResponsiveContainer width="100%" height={250}>
         <BarChart data={DATA} barSize={10}>
           <XAxis dataKey="day" tickCount={10} tickMargin={15} axisLine={false} tickLine={false} />
-          <YAxis
-            type="number"
+          <YAxis            
             yAxisId={1}
             dataKey="kilogram"
             orientation="right"

@@ -31,17 +31,17 @@
   font-weight: 500;
 }
 
-.legend-item-0 {
+.daily-bar-chart .legend-item-0 {
   /* Margin and padding */
   margin-right: 2vw !important;
 }
 
-.legend-item-1 {
+.daily-bar-chart .legend-item-1 {
   /* Margin and padding */
   margin: 0 !important;
 }
 
-.recharts-legend-item-text {
+.daily-bar-chart .recharts-legend-item-text {
   /* Font */
   color: #74798c !important;
   font-size: 1vw;
@@ -51,13 +51,13 @@
   margin-left: 0.4vw;
 }
 
-.recharts-text {
+.daily-bar-chart .recharts-text {
   /* Font */
   color: #9b9eac;
   font-size: 1vw;
 }
 
-.custom-tooltip {
+.daily-custom-tooltip {
   /* Display */
   display: flex;
   flex-direction: column;
@@ -66,7 +66,7 @@
   background: red;
 }
 
-.custom-tooltip__data {
+.daily-custom-tooltip__data {
   /* Display */
   display: flex;
   justify-content: center;
@@ -76,7 +76,7 @@
   padding: 0.9vw 0.45vw;
 }
 
-.custom-tooltip__data__text {
+.daily-custom-tooltip__data__text {
   /* Font */
   color: white;
   font-size: .75vw;

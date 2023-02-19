@@ -1,0 +1,61 @@
+.average-line-chart {
+  /* Size */
+  width: 23vw;
+  min-height: 20vw;
+
+  /* Display */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  /* Position */
+  position: relative;
+
+  /* Background */
+  background-color: rgb(255, 0, 0);
+
+  /* Border */
+  border-radius: 0.5vw;
+
+  /* Margin and padding */
+  padding-bottom: 2vh;
+}
+
+.average-line-chart__title {
+  /* Size */
+  max-width: 12.5vw;
+
+  /* Position */
+  position: absolute;
+  top: 2.5vw;
+  left: 2.5vw;
+
+  /* Font */
+  font-size: 1.25vw;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.average-line-chart .recharts-text {
+  /* Font */
+  font-size: 1vw;
+}
+
+.average-custom-tooltip {
+  /* Display */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Background */
+  background-color: #ffffff;
+
+  /* Margin and padding */
+  padding: 0.5vw 1vw;
+}
+
+.average-custom-tooltip__text {
+  /* Font */
+  font-weight: 500;
+  font-size: 0.75vw;
+}

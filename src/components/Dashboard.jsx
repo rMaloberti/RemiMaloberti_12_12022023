@@ -1,4 +1,5 @@
 import '../style/components/Dashboard.css';
+import AverageLineChart from './AverageLineChart';
 import DailyBarChart from './DailyBarChart';
 
 const Dashboard = () => {
@@ -17,7 +18,9 @@ const Dashboard = () => {
           <div className="charts-top">
             <DailyBarChart />
           </div>
-          <div className="charts-bottom"></div>
+          <div className="charts-bottom">
+            <AverageLineChart />
+          </div>
         </div>
         <div className="nutritionals"></div>
       </div>
