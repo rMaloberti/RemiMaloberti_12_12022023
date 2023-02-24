@@ -71,7 +71,7 @@ const DailyBarChart = () => {
   return (
     <div className="daily-bar-chart">
       <p className="daily-bar-chart__title">Activité quotidienne</p>
-      <ResponsiveContainer width="100%" height={250}>
+      <ResponsiveContainer width="100%" height="100%">
         <BarChart data={DATA} barSize={10}>
           <XAxis dataKey="day" tickCount={10} tickMargin={15} axisLine={false} tickLine={false} />
           <YAxis            
@@ -79,7 +79,7 @@ const DailyBarChart = () => {
             dataKey="kilogram"
             orientation="right"
             tickCount={4}
-            tickMargin={35}
+            tickMargin={40}
             domain={['dataMin - 5', 'dataMax + 5']}
             axisLine={false}
             tickLine={false}
@@ -97,7 +97,7 @@ const DailyBarChart = () => {
             content={<CustomTooltip />}
             cursor={{ fill: 'rgba(196, 196, 196, 0.5)' }}
           />
-          <Legend align="right" verticalAlign="top" iconSize={8} iconType="cricle" height={75} />
+          <Legend align="right" verticalAlign="top" iconSize={8} iconType="cricle" height={85} />
           <Bar
             name="Poids (kg)"
             yAxisId={1}

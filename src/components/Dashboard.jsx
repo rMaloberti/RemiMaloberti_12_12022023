@@ -1,6 +1,7 @@
 import '../style/components/Dashboard.css';
 import AverageLineChart from './AverageLineChart';
 import DailyBarChart from './DailyBarChart';
+import PerformanceRadarChart from './PerformanceRadarChart';
 
 const Dashboard = () => {
   return (
@@ -20,6 +21,7 @@ const Dashboard = () => {
           </div>
           <div className="charts-bottom">
             <AverageLineChart />
+            <PerformanceRadarChart />
           </div>
         </div>
         <div className="nutritionals"></div>

@@ -2,10 +2,14 @@
   /* Display */
   display: flex;
   flex-direction: column;
-  gap: .5vw;
+  gap: 1.9vh;
 }
 
 .nav-icons__button {  
+  /* Size */
+  width: 3.5vh;
+  height: 3.5vh;
+
   /* Display */
   display: flex;
   justify-content: center;
@@ -18,16 +22,13 @@
   border-radius: 0.4vw;
 
   /* Margin and padding */
-  padding: .9vw;
+  padding: 1.4vh;
 
   /* Interactivity */
   cursor: pointer;
 }
 
 .nav-icons__button__icon {
-  /* Size */
-  width: 2vw;
-
   /* Display */
   display: flex;
   justify-content: center;

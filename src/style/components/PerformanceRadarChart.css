@@ -1,0 +1,21 @@
+.performance-radar-chart {
+  /* Size */
+  width: 25.5vh;
+  height: 25.5vh;
+
+  /* Display */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Background */
+  background-color: #282d30;
+
+  /* Border */
+  border-radius: 0.5vw;
+}
+
+.performance-radar-chart .recharts-text {
+  /* Font */
+  font-size: 1.25vh;
+}

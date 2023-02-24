@@ -85,14 +85,12 @@ const AverageLineChart = () => {
   return (
     <div className="average-line-chart">
       <p className="average-line-chart__title">Durée moyenne des sessions</p>
-      <ResponsiveContainer width="100%" height={200}>
+      <ResponsiveContainer width="100%" height="65%">
         <LineChart
           data={DATA}
           margin={{
             top: 10,
-            right: 8,
-            left: 8,
-            bottom: 40,
+            bottom: 31,
           }}
           onMouseMove={customOnMouseIn}
           onMouseLeave={customOnMouseOut}
@@ -105,7 +103,7 @@ const AverageLineChart = () => {
             tickLine={false}
             tick={{ fill: 'white' }}
             padding={{ left: 20, right: 20 }}
-            tickMargin={40}
+            tickMargin={25}
             fillOpacity={0.5}
           />
           <YAxis hide={true} domain={['dataMin', 'dataMax']} />
