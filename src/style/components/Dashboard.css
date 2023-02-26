@@ -42,6 +42,7 @@
   /* Display */
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .charts {
@@ -78,10 +79,12 @@
 
 .nutritionals {
   /* Size */
-  width: 25%;
+  width: 23%;
+  height: 100%;
 
   /* Display */
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
