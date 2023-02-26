@@ -1,6 +1,7 @@
 import '../style/components/Dashboard.css';
 import AverageLineChart from './AverageLineChart';
 import DailyBarChart from './DailyBarChart';
+import ObjectifRadialChart from './ObjectifRadialChart';
 import PerformanceRadarChart from './PerformanceRadarChart';
 
 const Dashboard = () => {
@@ -22,6 +23,7 @@ const Dashboard = () => {
           <div className="charts-bottom">
             <AverageLineChart />
             <PerformanceRadarChart />
+            <ObjectifRadialChart />
           </div>
         </div>
         <div className="nutritionals"></div>
