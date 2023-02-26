@@ -9,32 +9,32 @@
 
 .navbar-top {
   /* Size */
-  min-height: 10%;
+  height: 9vh;
 
   /* Display */
-  gap: 10vw;
+  justify-content: space-between;
 
   /* Margin and padding */
-  padding: 0 2vw;
+  padding: 0 4vw 0 2vw;
 }
 
 .navbar-left {
   /* Size */
-  width: 8%;
+  width: 11.5vh;
 
   /* Display */
   flex: 1;
   flex-direction: column-reverse;
-  gap: 15vh;
+  gap: 17.5vh;
 
   /* Margin and padding */
-  padding: 4vw 0;
+  padding-bottom: 5.75vh;
 }
 
 .navbar__copyright {
   /* Font */
   color: #ffffff;
-  font-size: 0.85vw;
+  font-size: 1.2vh;
   font-weight: 500;
   writing-mode: vertical-rl;
 

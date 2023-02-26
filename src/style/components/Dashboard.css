@@ -5,9 +5,7 @@
   /* Display */
   display: flex;
   flex-direction: column;
-
-  /* Margin and padding */
-  margin: 6.7vh 6.25vw 8.4vh 7.5vw;
+  justify-content: space-between;
 }
 
 .dashboard__header {
@@ -17,21 +15,73 @@
   /* Display */
   display: flex;
   flex-direction: column;
-  gap: 5.5vh;
+  align-items: flex-start;
+  gap: 4vh;
 }
 
 .dashboard__header__greetings {
   /* Font */
-  font-size: 48px;
+  font-size: 4.7vh;
   font-weight: 500;
 }
 
 .dashboard__header__greetings__name {
   /* Font */
-  color: #FF0101;
+  color: #ff0101;
 }
 
 .dashboard__header__feedback {
   /* Font */
-  font-size: 18px;
+  font-size: 1.77vh;
+}
+
+.dashboard__stats {
+  /* Size */
+  width: 100%;
+
+  /* Display */
+  display: flex;
+  align-items: center;
+}
+
+.charts {
+  /* Size */
+  width: 74.3%;
+  max-width: 100vh;
+
+  /* Display */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.9vh;
+}
+
+.charts-top,
+.charts-bottom {
+  /* Size */
+  width: 100%;
+
+  /* Display */
+  display: flex;
+  align-items: center;
+}
+
+.charts-top {
+  /* Display */
+  justify-content: center;
+}
+
+.charts-bottom {
+  /* Display */
+  justify-content: space-between;
+}
+
+.nutritionals {
+  /* Size */
+  width: 25%;
+
+  /* Display */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

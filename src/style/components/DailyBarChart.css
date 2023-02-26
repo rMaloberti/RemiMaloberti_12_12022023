@@ -1,0 +1,86 @@
+.daily-bar-chart {
+  /* Size */
+  width: 100%;
+  height: 18.75vw;
+
+  /* Display */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Position */
+  position: relative;
+
+  /* Background */
+  background-color: #fbfbfb;
+
+  /* Border */
+  border-radius: 0.5vw;
+
+  /* Margin and padding */
+  padding: 2.4vh 2.9vh 2.4vh 4.25vh;
+}
+
+.daily-bar-chart__title {
+  /* Position */
+  position: absolute;
+  top: 2.5vh;
+  left: 4.25vh;
+
+  /* Font */
+  font-size: 1.5vh;
+  font-weight: 500;
+}
+
+.daily-bar-chart .legend-item-0 {
+  /* Margin and padding */
+  margin-right: 2vw !important;
+}
+
+.daily-bar-chart .legend-item-1 {
+  /* Margin and padding */
+  margin: 0 !important;
+}
+
+.daily-bar-chart .recharts-legend-item-text {
+  /* Font */
+  color: #74798c !important;
+  font-size: 1.35vh;
+  font-weight: 500;
+
+  /* Margin and padding */
+  margin-left: 0.4vw;
+}
+
+.daily-bar-chart .recharts-text {
+  /* Font */
+  color: #9b9eac;
+  font-size: 1.4vh;
+}
+
+.daily-custom-tooltip {
+  /* Display */
+  display: flex;
+  flex-direction: column;
+
+  /* Background */
+  background: rgb(230, 0, 0);
+}
+
+.daily-custom-tooltip__data {
+  /* Display */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Margin and padding */
+  padding: 0.75vh;
+}
+
+.daily-custom-tooltip__data__text {
+  /* Font */
+  color: white;
+  font-size: .75vh;
+  font-weight: 500;
+  text-align: center;
+}
