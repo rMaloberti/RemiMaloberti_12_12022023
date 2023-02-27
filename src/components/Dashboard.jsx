@@ -9,11 +9,13 @@ import { useEffect, useState } from 'react';
 const Dashboard = ({ data }) => {
   const [userName, setUserName] = useState();
   const [nutritionalDatas, setNutritionalDatas] = useState();
+  const [userSessions, setUserSessions] = useState();
 
   useEffect(() => {
     if (data) {
       setUserName(data.userMainData.userInfos.firstName);
       setNutritionalDatas(data.userMainData.nutritionals);
+      setUserSessions(data.userActivity.sessions);
     }
   }, [data]);
 
@@ -30,7 +32,7 @@ const Dashboard = ({ data }) => {
       <div className="dashboard__stats">
         <div className="charts">
           <div className="charts-top">
-            <DailyBarChart />
+            {userSessions ? <DailyBarChart data={userSessions} /> : null}
           </div>
           <div className="charts-bottom">
             <AverageLineChart />
