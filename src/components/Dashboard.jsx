@@ -8,10 +8,12 @@ import { useEffect, useState } from 'react';
 
 const Dashboard = ({ data }) => {
   const [userName, setUserName] = useState();
+  const [nutritionalDatas, setNutritionalDatas] = useState();
 
   useEffect(() => {
     if (data) {
       setUserName(data.userMainData.userInfos.firstName);
+      setNutritionalDatas(data.userMainData.nutritionals);
     }
   }, [data]);
 
@@ -37,10 +39,11 @@ const Dashboard = ({ data }) => {
           </div>
         </div>
         <div className="nutritionals">
-          <Nutritional dataKey="calories" label="Calories" value={1930} unit="kCal" />
-          <Nutritional dataKey="proteins" label="Proteines" value={155} unit="g" />
-          <Nutritional dataKey="carbohydrates" label="Glucides" value={290} unit="g" />
-          <Nutritional dataKey="lipids" label="Lipides" value={50} unit="g" />
+          {nutritionalDatas
+            ? Object.keys(nutritionalDatas).map((dataKey, index) => (
+                <Nutritional key={index} data={{ key: dataKey, data: nutritionalDatas[dataKey] }} />
+              ))
+            : null}
         </div>
       </div>
     </div>

@@ -5,10 +5,21 @@ import proteins from '../icons/proteins.svg';
 import { useEffect, useState } from 'react';
 import '../style/components/Nutritional.css';
 
-const Nutritional = (props) => {
-  const { dataKey, label, value, unit } = props;
-
+const Nutritional = ({ data }) => {
+  const [dataKey, setDataKey] = useState();
+  const [label, setLabel] = useState();
+  const [value, setValue] = useState();
+  const [unit, setUnit] = useState();
   const [icon, setIcon] = useState(null);
+
+  useEffect(() => {
+    if (data) {
+      setDataKey(data.key);
+      setLabel(data.data.label);
+      setValue(data.data.value);
+      setUnit(data.data.unit);
+    }
+  }, [data]);
 
   useEffect(() => {
     switch (dataKey) {
@@ -35,7 +46,10 @@ const Nutritional = (props) => {
         <img className="nutritional__thumbnail__icn" alt={`${dataKey} icon`} src={icon} />
       </div>
       <div className="nutritional__text">
-        <p className="nutritional__text__value">{value}{unit}</p>
+        <p className="nutritional__text__value">
+          {value}
+          {unit}
+        </p>
         <p className="nutritional__text__label">{label}</p>
       </div>
     </div>

@@ -5,10 +5,26 @@ export default class DataComputer {
       userInfos: data.userInfos,
       todayScore: { score: data.todayScore, percentage: `${Math.round(data.todayScore * 100)}%` },
       nutritionals: {
-        calories: data.keyData.calorieCount,
-        proteins: data.keyData.proteinCount,
-        carbohydrates: data.keyData.carbohydrateCount,
-        lipids: data.keyData.lipidCount,
+        calories: {
+          label: 'Calories',
+          value: data.keyData.calorieCount,
+          unit: 'kCal',
+        },
+        proteins: {
+          label: 'Proteines',
+          value: data.keyData.proteinCount,
+          unit: 'g',
+        },
+        carbohydrates: {
+          label: 'Glucides',
+          value: data.keyData.carbohydrateCount,
+          unit: 'g',
+        },
+        lipids: {
+          label: 'Lipides',
+          value: data.keyData.lipidCount,
+          unit: 'g',
+        },
       },
     };
 
