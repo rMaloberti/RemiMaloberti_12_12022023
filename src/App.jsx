@@ -12,7 +12,7 @@ import DataComputer from './utils/DataComputer';
 
 const App = () => {
   const MOCKED_DATA = true;
-  const USER_ID = 12;
+  const USER_ID = 18;
 
   const [dashboardData, setDashboardData] = useState();
 
