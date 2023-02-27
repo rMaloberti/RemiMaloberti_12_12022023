@@ -11,6 +11,7 @@ const Dashboard = ({ data }) => {
   const [nutritionalDatas, setNutritionalDatas] = useState();
   const [userSessions, setUserSessions] = useState();
   const [userSessionsLength, setUserSessionsLength] = useState();
+  const [userPerformance, setUserPerformance] = useState();
 
   useEffect(() => {
     if (data) {
@@ -18,6 +19,7 @@ const Dashboard = ({ data }) => {
       setNutritionalDatas(data.userMainData.nutritionals);
       setUserSessions(data.userActivity.sessions);
       setUserSessionsLength(data.userAverageSessions.sessions);
+      setUserPerformance(data.userPerformance);
     }
   }, [data]);
 
@@ -38,7 +40,7 @@ const Dashboard = ({ data }) => {
           </div>
           <div className="charts-bottom">
             {userSessionsLength ? <AverageLineChart data={userSessionsLength} /> : null}
-            <PerformanceRadarChart />
+            {userPerformance ? <PerformanceRadarChart data={userPerformance} /> : null}
             <ObjectifRadialChart />
           </div>
         </div>
