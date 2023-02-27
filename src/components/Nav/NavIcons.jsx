@@ -1,8 +1,8 @@
-import cycling from '../icons/cycling.svg';
-import fitness from '../icons/fitness.svg';
-import swimming from '../icons/swimming.svg';
-import yoga from '../icons/yoga.svg';
-import '../style/components/NavIcons.css';
+import cycling from '../../icons/cycling.svg';
+import fitness from '../../icons/fitness.svg';
+import swimming from '../../icons/swimming.svg';
+import yoga from '../../icons/yoga.svg';
+import '../../style/components/Nav/NavIcons.css';
 
 const NavIcons = () => {
   return (

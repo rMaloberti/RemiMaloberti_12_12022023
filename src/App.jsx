@@ -1,5 +1,5 @@
 import Dashboard from './components/Dashboard';
-import Navbar from './components/Navbar';
+import Navbar from './components/Nav/Navbar';
 import './style/App.css';
 
 const App = () => {

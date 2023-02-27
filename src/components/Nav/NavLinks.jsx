@@ -1,4 +1,4 @@
-import '../style/components/NavLinks.css';
+import '../../style/components/Nav/NavLinks.css';
 
 const NavLinks = () => {
   return (
