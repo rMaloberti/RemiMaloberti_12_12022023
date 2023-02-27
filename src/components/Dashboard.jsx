@@ -4,13 +4,22 @@ import DailyBarChart from './Charts/DailyBarChart';
 import Nutritional from './Nutritional';
 import ObjectifRadialChart from './Charts/ObjectifRadialChart';
 import PerformanceRadarChart from './Charts/PerformanceRadarChart';
+import { useEffect, useState } from 'react';
 
-const Dashboard = () => {
+const Dashboard = ({ data }) => {
+  const [userName, setUserName] = useState();
+
+  useEffect(() => {
+    if (data) {
+      setUserName(data.userMainData.userInfos.firstName);
+    }
+  }, [data]);
+
   return (
     <div className="dashboard">
       <div className="dashboard__header">
         <p className="dashboard__header__greetings">
-          Bonjour <span className="dashboard__header__greetings__name">Thomas</span>
+          Bonjour <span className="dashboard__header__greetings__name">{userName}</span>
         </p>
         <p className="dashboard__header__feedback">
           Félicitation ! Vous avez explosé vos objectifs hier 👏
