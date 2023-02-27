@@ -11,21 +11,31 @@ import './style/App.css';
 import DataComputer from './utils/DataComputer';
 
 const App = () => {
-  const userId = 12;
+  const MOCKED_DATA = true;
+  const USER_ID = 12;
 
-  const [isMockedData, setIsMockedData] = useState(true);
+  const [dashboardData, setDashboardData] = useState();
 
   useEffect(() => {
-    if (isMockedData) {
-      console.log(
-        DataComputer.computeUserPerformance(
-          USER_PERFORMANCE.find((data) => data.userId === userId)
-        )
-      );
+    if (MOCKED_DATA) {
+      setDashboardData({
+        userMainData: DataComputer.computeUserMainData(
+          USER_MAIN_DATA.find((data) => data.id === USER_ID)
+        ),
+        userActivity: DataComputer.computeUserActivity(
+          USER_ACTIVITY.find((data) => data.userId === USER_ID)
+        ),
+        userAverageSessions: DataComputer.computeUserAverageSessions(
+          USER_AVERAGE_SESSIONS.find((data) => data.userId === USER_ID)
+        ),
+        userPerformance: DataComputer.computeUserPerformance(
+          USER_PERFORMANCE.find((data) => data.userId === USER_ID)
+        ),
+      });
     } else {
       console.log('Static');
     }
-  }, [isMockedData]);
+  }, [MOCKED_DATA, USER_ID]);
 
   return (
     <div className="app">
@@ -34,7 +44,7 @@ const App = () => {
         <Navbar location="left" />
       </div>
       <div className="main">
-        <Dashboard />
+        <Dashboard data={dashboardData} />
       </div>
     </div>
   );

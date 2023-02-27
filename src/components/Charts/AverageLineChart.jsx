@@ -1,38 +1,39 @@
+import { useEffect, useState } from 'react';
 import { Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import '../../style/components/Charts/AverageLineChart.css';
 
-const AverageLineChart = () => {
-  const CustomTooltip = ({ active, payload, label }) => {
-    if (active && payload && payload.length) {
-      return (
-        <div className="average-custom-tooltip">
-          {payload.map((pld, index) => (
-            <p key={index} className="average-custom-tooltip__text">{`${pld.value} ${pld.unit}`}</p>
-          ))}
-        </div>
-      );
-    }
-
-    return null;
-  };
-
-  const CustomActiveDot = ({ cx, cy }) => {
+const CustomTooltip = ({ active, payload, label }) => {
+  if (active && payload && payload.length) {
     return (
-      <g class="recharts-layer recharts-active-dot">
-        <circle
-          cx={cx}
-          cy={cy}
-          r="4"
-          fill="#ffffff"
-          stroke-width="12"
-          strokeOpacity={0.25}
-          stroke="#ffffff"
-          class="recharts-dot"
-        ></circle>
-      </g>
+      <div className="average-custom-tooltip">
+        {payload.map((pld, index) => (
+          <p key={index} className="average-custom-tooltip__text">{`${pld.value} ${pld.unit}`}</p>
+        ))}
+      </div>
     );
-  };
+  }
 
+  return null;
+};
+
+const CustomActiveDot = ({ cx, cy }) => {
+  return (
+    <g className="recharts-layer recharts-active-dot">
+      <circle
+        cx={cx}
+        cy={cy}
+        r="4"
+        fill="#ffffff"
+        strokeWidth="12"
+        strokeOpacity={0.25}
+        stroke="#ffffff"
+        className="recharts-dot"
+      ></circle>
+    </g>
+  );
+};
+
+const AverageLineChart = ({ data }) => {
   const customOnMouseIn = (e) => {
     let chartWrapper = document.querySelector('.average-line-chart');
 
@@ -51,43 +52,18 @@ const AverageLineChart = () => {
     chartWrapper.style.background = 'rgb(255, 0, 0)';
   };
 
-  const DATA = [
-    {
-      day: 'L',
-      sessionLength: 30,
-    },
-    {
-      day: 'M',
-      sessionLength: 23,
-    },
-    {
-      day: 'M',
-      sessionLength: 45,
-    },
-    {
-      day: 'J',
-      sessionLength: 50,
-    },
-    {
-      day: 'V',
-      sessionLength: 0,
-    },
-    {
-      day: 'S',
-      sessionLength: 0,
-    },
-    {
-      day: 'D',
-      sessionLength: 60,
-    },
-  ];
+  const [chartData, setChartData] = useState();
+
+  useEffect(() => {
+    setChartData(data);
+  }, [data])
 
   return (
     <div className="average-line-chart">
       <p className="average-line-chart__title">Durée moyenne des sessions</p>
       <ResponsiveContainer width="100%" height="65%">
         <LineChart
-          data={DATA}
+          data={chartData}
           margin={{
             top: 10,
             bottom: 31,
@@ -106,7 +82,7 @@ const AverageLineChart = () => {
             tickMargin={25}
             fillOpacity={0.5}
           />
-          <YAxis hide={true} domain={['dataMin', 'dataMax']} />
+          <YAxis hide={true} domain={['dataMin - 1', 'dataMax + 1']} />
           <Tooltip cursor={false} wrapperStyle={{ outline: 'none' }} content={<CustomTooltip />} />
           <Line
             type="natural"
