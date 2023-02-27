@@ -1,5 +1,5 @@
 import { PolarAngleAxis, PolarGrid, Radar, RadarChart, ResponsiveContainer } from 'recharts';
-import '../style/components/PerformanceRadarChart.css';
+import '../../style/components/Charts/PerformanceRadarChart.css';
 
 const PerformanceRadarChart = () => {
   const DATA = [

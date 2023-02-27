@@ -1,9 +1,9 @@
 import '../style/components/Dashboard.css';
-import AverageLineChart from './AverageLineChart';
-import DailyBarChart from './DailyBarChart';
+import AverageLineChart from './Charts/AverageLineChart';
+import DailyBarChart from './Charts/DailyBarChart';
 import Nutritional from './Nutritional';
-import ObjectifRadialChart from './ObjectifRadialChart';
-import PerformanceRadarChart from './PerformanceRadarChart';
+import ObjectifRadialChart from './Charts/ObjectifRadialChart';
+import PerformanceRadarChart from './Charts/PerformanceRadarChart';
 
 const Dashboard = () => {
   return (

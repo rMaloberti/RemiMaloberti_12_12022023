@@ -1,4 +1,4 @@
-import '../style/components/Navbar.css';
+import '../../style/components/Nav/Navbar.css';
 import Logo from './Logo';
 import NavIcons from './NavIcons';
 import NavLinks from './NavLinks';

@@ -1,5 +1,5 @@
 import { PolarAngleAxis, RadialBar, RadialBarChart, ResponsiveContainer } from 'recharts';
-import '../style/components/ObjectifRadialChart.css';
+import '../../style/components/Charts/ObjectifRadialChart.css';
 
 const ObjectifRadialChart = () => {
   const DATA = {

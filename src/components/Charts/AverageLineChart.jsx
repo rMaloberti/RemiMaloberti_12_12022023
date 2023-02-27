@@ -1,5 +1,5 @@
 import { Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
-import '../style/components/AverageLineChart.css';
+import '../../style/components/Charts/AverageLineChart.css';
 
 const AverageLineChart = () => {
   const CustomTooltip = ({ active, payload, label }) => {
