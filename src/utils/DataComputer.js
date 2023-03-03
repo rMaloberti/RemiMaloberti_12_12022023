@@ -1,6 +1,21 @@
 export default class DataComputer {
-  static computeUserMainData = (data) => {
-    const computedData = {
+  #data;
+
+  constructor(data) {
+    this.#data = data;
+  }
+
+  get computedData() {
+    return {
+      userMainData: this.#computeUserMainData(this.#data.userMainData),
+      userActivity: this.#computeUserActivity(this.#data.userActivity),
+      userAverageSessions: this.#computeUserAverageSessions(this.#data.userAverageSessions),
+      userPerformance: this.#computeUserPerformance(this.#data.userPerformance),
+    };
+  }
+
+  #computeUserMainData(data) {
+    return {
       userId: data.id,
       userInfos: data.userInfos,
       todayScore: { score: data.todayScore, percentage: `${Math.round(data.todayScore * 100)}%` },
@@ -27,11 +42,9 @@ export default class DataComputer {
         },
       },
     };
+  }
 
-    return computedData;
-  };
-
-  static computeUserActivity = (data) => {
+  #computeUserActivity(data) {
     const computedData = {
       userId: data.userId,
       sessions: [],
@@ -48,9 +61,9 @@ export default class DataComputer {
     });
 
     return computedData;
-  };
+  }
 
-  static computeUserAverageSessions = (data) => {
+  #computeUserAverageSessions(data) {
     const computedData = {
       userId: data.userId,
       sessions: [],
@@ -91,9 +104,9 @@ export default class DataComputer {
     });
 
     return computedData;
-  };
+  }
 
-  static computeUserPerformance = (data) => {
+  #computeUserPerformance(data) {
     const computedData = {
       userId: data.userId,
       kind: {
@@ -112,5 +125,5 @@ export default class DataComputer {
     }
 
     return computedData;
-  };
+  }
 }
