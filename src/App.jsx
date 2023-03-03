@@ -5,13 +5,13 @@ import './style/App.css';
 import { getComputedUserData } from './utils/UserData';
 
 const App = () => {
-  const MOCKED_DATA = true;
-  const USER_ID = 12;
+  const MOCKED_DATA = false;
+  const USER_ID = 18;
 
   const [dashboardData, setDashboardData] = useState();
 
   useEffect(() => {
-    setDashboardData(getComputedUserData(MOCKED_DATA, USER_ID));
+    getComputedUserData(MOCKED_DATA, USER_ID).then((data) => setDashboardData(data));
   }, [MOCKED_DATA, USER_ID]);
 
   return (

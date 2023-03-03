@@ -6,7 +6,43 @@ import {
 } from '../data/mockedData';
 import DataComputer from './DataComputer';
 
-export const getComputedUserData = (isMockedData, userId) => {
+const getApiUserData = async (userId) => {
+  const data = await fetch(`http://localhost:3000/user/${userId}`)
+    .then((res) => res.json())
+    .then((data) => data.data)
+    .catch((err) => console.log(err));
+
+  return data;
+};
+
+const getApiUserActivity = async (userId) => {
+  const data = await fetch(`http://localhost:3000/user/${userId}/activity`)
+    .then((res) => res.json())
+    .then((data) => data.data)
+    .catch((err) => console.log(err));
+
+  return data;
+};
+
+const getApiUserSessions = async (userId) => {
+  const data = await fetch(`http://localhost:3000/user/${userId}/average-sessions`)
+    .then((res) => res.json())
+    .then((data) => data.data)
+    .catch((err) => console.log(err));
+
+  return data;
+};
+
+const getApiUserPerformance = async (userId) => {
+  const data = await fetch(`http://localhost:3000/user/${userId}/performance`)
+    .then((res) => res.json())
+    .then((data) => data.data)
+    .catch((err) => console.log(err));
+
+  return data;
+};
+
+export const getComputedUserData = async (isMockedData, userId) => {
   const rawData = isMockedData
     ? {
         userMainData: USER_MAIN_DATA.find((data) => data.id === userId),
@@ -14,7 +50,12 @@ export const getComputedUserData = (isMockedData, userId) => {
         userAverageSessions: USER_AVERAGE_SESSIONS.find((data) => data.userId === userId),
         userPerformance: USER_PERFORMANCE.find((data) => data.userId === userId),
       }
-    : null;
+    : {
+        userMainData: await getApiUserData(userId),
+        userActivity: await getApiUserActivity(userId),
+        userAverageSessions: await getApiUserSessions(userId),
+        userPerformance: await getApiUserPerformance(userId),
+      };
 
   const computer = new DataComputer(rawData);
 
