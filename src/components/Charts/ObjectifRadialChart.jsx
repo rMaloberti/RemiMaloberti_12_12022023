@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import { PolarAngleAxis, RadialBar, RadialBarChart, ResponsiveContainer } from 'recharts';
 import '../../style/components/Charts/ObjectifRadialChart.css';
@@ -43,6 +44,13 @@ const ObjectifRadialChart = ({ data }) => {
       </div>
     </div>
   );
+};
+
+ObjectifRadialChart.propTypes = {
+  data: PropTypes.shape({
+    score: PropTypes.number,
+    percentage: PropTypes.string,
+  }),
 };
 
 export default ObjectifRadialChart;

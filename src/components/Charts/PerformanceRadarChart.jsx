@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import { PolarAngleAxis, PolarGrid, Radar, RadarChart, ResponsiveContainer } from 'recharts';
 import '../../style/components/Charts/PerformanceRadarChart.css';
@@ -49,6 +50,26 @@ const PerformanceRadarChart = ({ data }) => {
       </ResponsiveContainer>
     </div>
   );
+};
+
+PerformanceRadarChart.propTypes = {
+  data: PropTypes.shape({
+    userId: PropTypes.number,
+    kind: PropTypes.shape({
+      1: PropTypes.string,
+      2: PropTypes.string,
+      3: PropTypes.string,
+      4: PropTypes.string,
+      5: PropTypes.string,
+      6: PropTypes.string,
+    }),
+    data: PropTypes.arrayOf(
+      PropTypes.shape({
+        value: PropTypes.number,
+        kind: PropTypes.number,
+      })
+    ),
+  }),
 };
 
 export default PerformanceRadarChart;

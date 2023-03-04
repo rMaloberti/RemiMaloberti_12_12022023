@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import {
   Bar,
@@ -37,7 +38,7 @@ const DailyBarChart = ({ data }) => {
     if (data) {
       setChartData(data);
     }
-  }, [data])
+  }, [data]);
 
   return (
     <div className="daily-bar-chart">
@@ -45,7 +46,7 @@ const DailyBarChart = ({ data }) => {
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={chartData} barSize={10}>
           <XAxis dataKey="day" tickCount={10} tickMargin={15} axisLine={false} tickLine={false} />
-          <YAxis            
+          <YAxis
             yAxisId={1}
             dataKey="kg"
             orientation="right"
@@ -89,6 +90,16 @@ const DailyBarChart = ({ data }) => {
       </ResponsiveContainer>
     </div>
   );
+};
+
+DailyBarChart.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      day: PropTypes.number,
+      kg: PropTypes.number,
+      calories: PropTypes.number,
+    })
+  ),
 };
 
 export default DailyBarChart;
