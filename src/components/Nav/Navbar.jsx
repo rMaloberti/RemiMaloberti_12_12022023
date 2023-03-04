@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import '../../style/components/Nav/Navbar.css';
 import Logo from './Logo';
 import NavIcons from './NavIcons';
@@ -14,6 +15,10 @@ const Navbar = ({ location }) => {
       {location === 'top' ? <NavLinks /> : <NavIcons />}
     </div>
   );
+};
+
+Navbar.propTypes = {
+  location: PropTypes.string,
 };
 
 export default Navbar;

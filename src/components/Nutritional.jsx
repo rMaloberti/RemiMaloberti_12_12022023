@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import calories from '../icons/calories.svg';
 import carbohydrates from '../icons/carbohydrates.svg';
 import lipids from '../icons/lipids.svg';
@@ -54,6 +55,17 @@ const Nutritional = ({ data }) => {
       </div>
     </div>
   );
+};
+
+Nutritional.propTypes = {
+  data: PropTypes.shape({
+    key: PropTypes.string,
+    data: PropTypes.shape({
+      label: PropTypes.string,
+      unit: PropTypes.string,
+      value: PropTypes.number,
+    }),
+  }),
 };
 
 export default Nutritional;

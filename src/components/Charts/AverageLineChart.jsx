@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import { Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import '../../style/components/Charts/AverageLineChart.css';
@@ -56,7 +57,7 @@ const AverageLineChart = ({ data }) => {
 
   useEffect(() => {
     setChartData(data);
-  }, [data])
+  }, [data]);
 
   return (
     <div className="average-line-chart">
@@ -98,4 +99,14 @@ const AverageLineChart = ({ data }) => {
     </div>
   );
 };
+
+AverageLineChart.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      day: PropTypes.string,
+      sessionLength: PropTypes.number,
+    })
+  ),
+};
+
 export default AverageLineChart;
