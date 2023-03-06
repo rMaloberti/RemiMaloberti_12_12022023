@@ -12,6 +12,13 @@ import {
 } from 'recharts';
 import '../../style/components/Charts/DailyBarChart.css';
 
+/**
+ * Render the custom chart tooltip.
+ * @function CustomTooltip
+ * @param {object} param - The tooltip data.
+ *  
+ * @returns {(JSX.Element | null)} The custom tooltip to render.
+ */
 const CustomTooltip = ({ active, payload, label }) => {
   if (active && payload && payload.length) {
     return (

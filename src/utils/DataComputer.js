@@ -1,10 +1,30 @@
+/**
+ * Creates a new data computer instance.
+ * @class
+ */
 export default class DataComputer {
+  /**
+   * The data to compute.
+   * @protected
+   * @type {object}
+   */
   #data;
 
+  /**
+   * Assign the data to the instance.
+   * @constructor
+   * @param {object} data - The data to compute.
+   */
   constructor(data) {
     this.#data = data;
   }
 
+  /**
+   * Get all the computed data.
+   * @function computedData
+   *
+   * @returns {object} The computed data.
+   */
   get computedData() {
     return {
       userMainData: this.#computeUserMainData(this.#data.userMainData),
@@ -14,6 +34,14 @@ export default class DataComputer {
     };
   }
 
+  /**
+   * Compute the user main data.
+   * @function #computeUserMainData
+   * @protected
+   * @param {object} data - The raw user main data.
+   *
+   * @returns {object} The computed user main data.
+   */
   #computeUserMainData(data) {
     return {
       userId: data.id,
@@ -44,6 +72,14 @@ export default class DataComputer {
     };
   }
 
+  /**
+   * Compute the user activities data.
+   * @function #computeUserActivity
+   * @protected
+   * @param {object} data - The raw user activities data.
+   *
+   * @returns {object} The computed user activities data.
+   */
   #computeUserActivity(data) {
     const computedData = {
       userId: data.userId,
@@ -63,6 +99,14 @@ export default class DataComputer {
     return computedData;
   }
 
+  /**
+   * Compute the user sessions data.
+   * @function #computeUserAverageSessions
+   * @protected
+   * @param {object} data - The raw user sessions data.
+   *
+   * @returns  {object} The computed user sessions data.
+   */
   #computeUserAverageSessions(data) {
     const computedData = {
       userId: data.userId,
@@ -106,6 +150,14 @@ export default class DataComputer {
     return computedData;
   }
 
+  /**
+   * Compute the user performance data.
+   * @function #computeUserPerformance
+   * @protected
+   * @param {object} data - The raw user performance data.
+   *
+   * @returns {object} The computed user performance data.
+   */
   #computeUserPerformance(data) {
     const computedData = {
       userId: data.userId,

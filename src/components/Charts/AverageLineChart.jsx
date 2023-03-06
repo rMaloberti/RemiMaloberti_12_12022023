@@ -3,6 +3,13 @@ import { useEffect, useState } from 'react';
 import { Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import '../../style/components/Charts/AverageLineChart.css';
 
+/**
+ * Render the custom chart tooltip.
+ * @function CustomTooltip
+ * @param {object} param - The tooltip data.
+ *  
+ * @returns {(JSX.Element | null)} The custom tooltip to render.
+ */
 const CustomTooltip = ({ active, payload, label }) => {
   if (active && payload && payload.length) {
     return (
@@ -17,6 +24,13 @@ const CustomTooltip = ({ active, payload, label }) => {
   return null;
 };
 
+/**
+ * Render the custom chart active dot.
+ * @function CustomActiveDot
+ * @param {object} param - The active dot data.
+ * 
+ * @returns  {JSX.Element} The custom active dot to render.
+ */
 const CustomActiveDot = ({ cx, cy }) => {
   return (
     <g className="recharts-layer recharts-active-dot">
@@ -35,6 +49,11 @@ const CustomActiveDot = ({ cx, cy }) => {
 };
 
 const AverageLineChart = ({ data }) => {
+  /**
+   * Render a dark background on the right side of the cursor when the user hover the chart.
+   * @function customOnMouseIn
+   * @param {event} e - The mouse in event that triggers the function. 
+   */
   const customOnMouseIn = (e) => {
     let chartWrapper = document.querySelector('.average-line-chart');
 
@@ -48,6 +67,10 @@ const AverageLineChart = ({ data }) => {
     }
   };
 
+  /**
+   * Hide the dark background when the user stops hoverring the chart.
+   * @function customOnMouseOut
+   */
   const customOnMouseOut = () => {
     let chartWrapper = document.querySelector('.average-line-chart');
     chartWrapper.style.background = 'rgb(255, 0, 0)';

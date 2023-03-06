@@ -7,6 +7,13 @@ const PerformanceRadarChart = ({ data }) => {
   const [performanceKind, setPerformanceKind] = useState();
   const [performanceData, setPerformanceData] = useState();
 
+  /**
+   * Get the right X-axis label from a given kind number.
+   * @function computeXAxis
+   * @param {number} kind - The kind number associated to a label.
+   * 
+   * @returns {string} The corresponding label to display on the chart's X-axis.
+   */
   const computeXAxis = (kind) => {
     switch (kind) {
       case 1:
