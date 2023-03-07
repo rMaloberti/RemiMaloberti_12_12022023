@@ -5,7 +5,7 @@ import './style/App.css';
 import { getComputedUserData } from './utils/UserData';
 
 const App = () => {
-  const MOCKED_DATA = true;
+  const MOCKED_DATA = false;
   const USER_ID = 12;
 
   const [dashboardData, setDashboardData] = useState();

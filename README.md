@@ -20,12 +20,15 @@ This project is a brand new feature for their main project. The goal is to creat
 
 ### 1. Prerequisites
 
-1. Package manager (one or the other) :
+1. Recomanded code editior :
+   - [Visual studio code](https://code.visualstudio.com/)
 
-   - [Node.js](https://nodejs.org/en/) and [NPM](https://www.npmjs.com/)
-   - [Yarn](https://yarnpkg.com/)
+2. Package manager (one or the other) :
 
-2. Libraries :
+   - [Node.js v16.X](https://nodejs.org/en/) and [NPM v9.X](https://www.npmjs.com/)
+   - [Yarn v1.22.X](https://yarnpkg.com/)
+
+3. Libraries :
 
 ![library-react](https://user-images.githubusercontent.com/76209231/169810015-87e342f6-ce87-4033-8e16-8194630f88e0.svg)
 ![library-recharts](https://user-images.githubusercontent.com/76209231/169810257-b16891a3-8f04-4e3c-8e3a-68a81e8f642b.svg)
