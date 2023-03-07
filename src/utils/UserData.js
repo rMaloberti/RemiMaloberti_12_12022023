@@ -17,7 +17,7 @@ const getApiUserData = async (userId) => {
   const data = await fetch(`http://localhost:3000/user/${userId}`)
     .then((res) => res.json())
     .then((data) => data.data)
-    .catch((err) => console.log(err));
+    .catch((err) => alert('Erreur : le service est actuellement indisponible, veuillez réessayer ulterieurement.'));
 
   return data;
 };
@@ -33,7 +33,7 @@ const getApiUserActivity = async (userId) => {
   const data = await fetch(`http://localhost:3000/user/${userId}/activity`)
     .then((res) => res.json())
     .then((data) => data.data)
-    .catch((err) => console.log(err));
+    .catch((err) => alert('Erreur : le service est actuellement indisponible, veuillez réessayer ulterieurement.'));
 
   return data;
 };
@@ -49,7 +49,7 @@ const getApiUserSessions = async (userId) => {
   const data = await fetch(`http://localhost:3000/user/${userId}/average-sessions`)
     .then((res) => res.json())
     .then((data) => data.data)
-    .catch((err) => console.log(err));
+    .catch((err) => alert('Erreur : le service est actuellement indisponible, veuillez réessayer ulterieurement.'));
 
   return data;
 };
@@ -65,7 +65,7 @@ const getApiUserPerformance = async (userId) => {
   const data = await fetch(`http://localhost:3000/user/${userId}/performance`)
     .then((res) => res.json())
     .then((data) => data.data)
-    .catch((err) => console.log(err));
+    .catch((err) => alert('Erreur : le service est actuellement indisponible, veuillez réessayer ulterieurement.'));
 
   return data;
 };
